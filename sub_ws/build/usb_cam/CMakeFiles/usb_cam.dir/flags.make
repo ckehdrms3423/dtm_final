@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"usb_cam\" -Dusb_cam_EXPORTS
 
-CXX_INCLUDES = -I/home/idp-503/test_ros/sub_ws/src/usb_cam/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/aarch64-linux-gnu 
+CXX_INCLUDES = -I/home/idp-503/dtm_final/sub_ws/src/usb_cam/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/aarch64-linux-gnu 
 

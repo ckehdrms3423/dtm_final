@@ -1,8 +1,8 @@
-prefix=/home/idp-503/test_ros/sub_ws/devel
+prefix=/home/idp-503/dtm_final/sub_ws/devel
 
 Name: rtcm_msgs
 Description: Description of rtcm_msgs
 Version: 1.1.1
-Cflags: -I/home/idp-503/test_ros/sub_ws/devel/include
+Cflags: -I/home/idp-503/dtm_final/sub_ws/devel/include
 Libs: -L${prefix}/lib 
 Requires: message_runtime std_msgs

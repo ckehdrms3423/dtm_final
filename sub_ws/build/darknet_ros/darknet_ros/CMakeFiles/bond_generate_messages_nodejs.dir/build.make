@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/idp-503/test_ros/sub_ws/src
+CMAKE_SOURCE_DIR = /home/idp-503/dtm_final/sub_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/idp-503/test_ros/sub_ws/build
+CMAKE_BINARY_DIR = /home/idp-503/dtm_final/sub_ws/build
 
 # Utility rule file for bond_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ darknet_ros/darknet_ros/CMakeFiles/bond_generate_messages_nodejs.dir/build: bond
 .PHONY : darknet_ros/darknet_ros/CMakeFiles/bond_generate_messages_nodejs.dir/build
 
 darknet_ros/darknet_ros/CMakeFiles/bond_generate_messages_nodejs.dir/clean:
-	cd /home/idp-503/test_ros/sub_ws/build/darknet_ros/darknet_ros && $(CMAKE_COMMAND) -P CMakeFiles/bond_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/idp-503/dtm_final/sub_ws/build/darknet_ros/darknet_ros && $(CMAKE_COMMAND) -P CMakeFiles/bond_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : darknet_ros/darknet_ros/CMakeFiles/bond_generate_messages_nodejs.dir/clean
 
 darknet_ros/darknet_ros/CMakeFiles/bond_generate_messages_nodejs.dir/depend:
-	cd /home/idp-503/test_ros/sub_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/idp-503/test_ros/sub_ws/src /home/idp-503/test_ros/sub_ws/src/darknet_ros/darknet_ros /home/idp-503/test_ros/sub_ws/build /home/idp-503/test_ros/sub_ws/build/darknet_ros/darknet_ros /home/idp-503/test_ros/sub_ws/build/darknet_ros/darknet_ros/CMakeFiles/bond_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/idp-503/dtm_final/sub_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/idp-503/dtm_final/sub_ws/src /home/idp-503/dtm_final/sub_ws/src/darknet_ros/darknet_ros /home/idp-503/dtm_final/sub_ws/build /home/idp-503/dtm_final/sub_ws/build/darknet_ros/darknet_ros /home/idp-503/dtm_final/sub_ws/build/darknet_ros/darknet_ros/CMakeFiles/bond_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : darknet_ros/darknet_ros/CMakeFiles/bond_generate_messages_nodejs.dir/depend
 

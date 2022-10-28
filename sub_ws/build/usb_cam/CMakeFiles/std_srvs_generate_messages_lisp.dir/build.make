@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/idp-503/test_ros/sub_ws/src
+CMAKE_SOURCE_DIR = /home/idp-503/dtm_final/sub_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/idp-503/test_ros/sub_ws/build
+CMAKE_BINARY_DIR = /home/idp-503/dtm_final/sub_ws/build
 
 # Utility rule file for std_srvs_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/build: std_srvs_generate_
 .PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
 
 usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean:
-	cd /home/idp-503/test_ros/sub_ws/build/usb_cam && $(CMAKE_COMMAND) -P CMakeFiles/std_srvs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/idp-503/dtm_final/sub_ws/build/usb_cam && $(CMAKE_COMMAND) -P CMakeFiles/std_srvs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
 
 usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/depend:
-	cd /home/idp-503/test_ros/sub_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/idp-503/test_ros/sub_ws/src /home/idp-503/test_ros/sub_ws/src/usb_cam /home/idp-503/test_ros/sub_ws/build /home/idp-503/test_ros/sub_ws/build/usb_cam /home/idp-503/test_ros/sub_ws/build/usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/idp-503/dtm_final/sub_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/idp-503/dtm_final/sub_ws/src /home/idp-503/dtm_final/sub_ws/src/usb_cam /home/idp-503/dtm_final/sub_ws/build /home/idp-503/dtm_final/sub_ws/build/usb_cam /home/idp-503/dtm_final/sub_ws/build/usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/depend
 

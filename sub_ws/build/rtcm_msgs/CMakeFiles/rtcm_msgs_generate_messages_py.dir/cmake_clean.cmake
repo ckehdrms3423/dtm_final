@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/rtcm_msgs_generate_messages_py"
-  "/home/idp-503/test_ros/sub_ws/devel/lib/python2.7/dist-packages/rtcm_msgs/msg/_Message.py"
-  "/home/idp-503/test_ros/sub_ws/devel/lib/python2.7/dist-packages/rtcm_msgs/msg/__init__.py"
+  "/home/idp-503/dtm_final/sub_ws/devel/lib/python2.7/dist-packages/rtcm_msgs/msg/_Message.py"
+  "/home/idp-503/dtm_final/sub_ws/devel/lib/python2.7/dist-packages/rtcm_msgs/msg/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

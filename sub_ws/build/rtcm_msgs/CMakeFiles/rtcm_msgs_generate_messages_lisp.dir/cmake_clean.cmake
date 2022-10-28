@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/rtcm_msgs_generate_messages_lisp"
-  "/home/idp-503/test_ros/sub_ws/devel/share/common-lisp/ros/rtcm_msgs/msg/Message.lisp"
+  "/home/idp-503/dtm_final/sub_ws/devel/share/common-lisp/ros/rtcm_msgs/msg/Message.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

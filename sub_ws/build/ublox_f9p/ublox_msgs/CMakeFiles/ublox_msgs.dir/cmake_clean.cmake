@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ublox_msgs.dir/src/ublox_msgs.cpp.o"
-  "/home/idp-503/test_ros/sub_ws/devel/lib/libublox_msgs.pdb"
-  "/home/idp-503/test_ros/sub_ws/devel/lib/libublox_msgs.so"
+  "/home/idp-503/dtm_final/sub_ws/devel/lib/libublox_msgs.pdb"
+  "/home/idp-503/dtm_final/sub_ws/devel/lib/libublox_msgs.so"
 )
 
 # Per-language clean rules from dependency scanning.

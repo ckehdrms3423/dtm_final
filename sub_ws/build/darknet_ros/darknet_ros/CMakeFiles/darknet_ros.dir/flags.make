@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS =   -O4 -g -std=gnu++11
 
-CXX_DEFINES = -DDARKNET_FILE_PATH=\"/home/idp-503/test_ros/sub_ws/src/darknet_ros/darknet\" -DGPU -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"darknet_ros\"
+CXX_DEFINES = -DDARKNET_FILE_PATH=\"/home/idp-503/dtm_final/sub_ws/src/darknet_ros/darknet\" -DGPU -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"darknet_ros\"
 
-CXX_INCLUDES = -isystem /usr/include/opencv4 -I/home/idp-503/test_ros/sub_ws/src/darknet_ros/darknet/src -I/home/idp-503/test_ros/sub_ws/src/darknet_ros/darknet/include -I/home/idp-503/test_ros/sub_ws/src/darknet_ros/darknet_ros/include -I/home/idp-503/test_ros/sub_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/local/include/opencv4 -I/usr/local/cuda-10.2/include 
+CXX_INCLUDES = -isystem /usr/include/opencv4 -I/home/idp-503/dtm_final/sub_ws/src/darknet_ros/darknet/src -I/home/idp-503/dtm_final/sub_ws/src/darknet_ros/darknet/include -I/home/idp-503/dtm_final/sub_ws/src/darknet_ros/darknet_ros/include -I/home/idp-503/dtm_final/sub_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/local/include/opencv4 -I/usr/local/cuda-10.2/include 
 

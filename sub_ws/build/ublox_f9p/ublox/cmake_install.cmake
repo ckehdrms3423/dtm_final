@@ -1,8 +1,8 @@
-# Install script for directory: /home/idp-503/test_ros/sub_ws/src/ublox_f9p/ublox
+# Install script for directory: /home/idp-503/dtm_final/sub_ws/src/ublox_f9p/ublox
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/idp-503/test_ros/sub_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/idp-503/dtm_final/sub_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,6 +38,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ublox" TYPE FILE FILES "/home/idp-503/test_ros/sub_ws/src/ublox_f9p/ublox/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ublox" TYPE FILE FILES "/home/idp-503/dtm_final/sub_ws/src/ublox_f9p/ublox/package.xml")
 endif()
 

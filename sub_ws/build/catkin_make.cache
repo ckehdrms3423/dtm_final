@@ -1,2 +1,2 @@
 darknet_ros/darknet_ros:darknet_ros/darknet_ros_msgs:rtcm_msgs:sub:ublox_f9p/ublox:ublox_f9p/ublox_gps:ublox_f9p/ublox_msgs:ublox_f9p/ublox_serialization:usb_cam
--DCATKIN_DEVEL_PREFIX=/home/idp-503/test_ros/sub_ws/devel -DCMAKE_INSTALL_PREFIX=/home/idp-503/test_ros/sub_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/idp-503/dtm_final/sub_ws/devel -DCMAKE_INSTALL_PREFIX=/home/idp-503/dtm_final/sub_ws/install -G Unix Makefiles

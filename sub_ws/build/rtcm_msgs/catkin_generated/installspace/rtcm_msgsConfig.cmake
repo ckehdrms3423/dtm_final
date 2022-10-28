@@ -67,14 +67,14 @@ set(rtcm_msgs_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(rtcm_msgs_SOURCE_PREFIX /home/idp-503/test_ros/sub_ws/src/rtcm_msgs)
-  set(rtcm_msgs_DEVEL_PREFIX /home/idp-503/test_ros/sub_ws/devel)
+  set(rtcm_msgs_SOURCE_PREFIX /home/idp-503/dtm_final/sub_ws/src/rtcm_msgs)
+  set(rtcm_msgs_DEVEL_PREFIX /home/idp-503/dtm_final/sub_ws/devel)
   set(rtcm_msgs_INSTALL_PREFIX "")
   set(rtcm_msgs_PREFIX ${rtcm_msgs_DEVEL_PREFIX})
 else()
   set(rtcm_msgs_SOURCE_PREFIX "")
   set(rtcm_msgs_DEVEL_PREFIX "")
-  set(rtcm_msgs_INSTALL_PREFIX /home/idp-503/test_ros/sub_ws/install)
+  set(rtcm_msgs_INSTALL_PREFIX /home/idp-503/dtm_final/sub_ws/install)
   set(rtcm_msgs_PREFIX ${rtcm_msgs_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/idp-503/test_ros/sub_ws/install/lib;/opt/ros/melodic/lib)
+    foreach(path /home/idp-503/dtm_final/sub_ws/install/lib;/home/idp-503/test_ros/sub_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

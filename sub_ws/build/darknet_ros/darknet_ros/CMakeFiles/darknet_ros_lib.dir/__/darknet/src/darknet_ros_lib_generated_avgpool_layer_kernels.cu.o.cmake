@@ -58,18 +58,18 @@ endif()
 
 # Set these up as variables to make reading the generated file easier
 set(CMAKE_COMMAND "/usr/bin/cmake") # path
-set(source_file "/home/idp-503/test_ros/sub_ws/src/darknet_ros/darknet/src/avgpool_layer_kernels.cu") # path
-set(NVCC_generated_dependency_file "/home/idp-503/test_ros/sub_ws/build/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_lib.dir/__/darknet/src/darknet_ros_lib_generated_avgpool_layer_kernels.cu.o.NVCC-depend") # path
-set(cmake_dependency_file "/home/idp-503/test_ros/sub_ws/build/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_lib.dir/__/darknet/src/darknet_ros_lib_generated_avgpool_layer_kernels.cu.o.depend") # path
+set(source_file "/home/idp-503/dtm_final/sub_ws/src/darknet_ros/darknet/src/avgpool_layer_kernels.cu") # path
+set(NVCC_generated_dependency_file "/home/idp-503/dtm_final/sub_ws/build/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_lib.dir/__/darknet/src/darknet_ros_lib_generated_avgpool_layer_kernels.cu.o.NVCC-depend") # path
+set(cmake_dependency_file "/home/idp-503/dtm_final/sub_ws/build/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_lib.dir/__/darknet/src/darknet_ros_lib_generated_avgpool_layer_kernels.cu.o.depend") # path
 set(CUDA_make2cmake "/usr/share/cmake-3.10/Modules/FindCUDA/make2cmake.cmake") # path
 set(CUDA_parse_cubin "/usr/share/cmake-3.10/Modules/FindCUDA/parse_cubin.cmake") # path
 set(build_cubin OFF) # bool
 set(CUDA_HOST_COMPILER "/usr/bin/cc") # path
 # We won't actually use these variables for now, but we need to set this, in
 # order to force this file to be run again if it changes.
-set(generated_file_path "/home/idp-503/test_ros/sub_ws/build/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_lib.dir/__/darknet/src/.") # path
-set(generated_file_internal "/home/idp-503/test_ros/sub_ws/build/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_lib.dir/__/darknet/src/./darknet_ros_lib_generated_avgpool_layer_kernels.cu.o") # path
-set(generated_cubin_file_internal "/home/idp-503/test_ros/sub_ws/build/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_lib.dir/__/darknet/src/./darknet_ros_lib_generated_avgpool_layer_kernels.cu.o.cubin.txt") # path
+set(generated_file_path "/home/idp-503/dtm_final/sub_ws/build/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_lib.dir/__/darknet/src/.") # path
+set(generated_file_internal "/home/idp-503/dtm_final/sub_ws/build/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_lib.dir/__/darknet/src/./darknet_ros_lib_generated_avgpool_layer_kernels.cu.o") # path
+set(generated_cubin_file_internal "/home/idp-503/dtm_final/sub_ws/build/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_lib.dir/__/darknet/src/./darknet_ros_lib_generated_avgpool_layer_kernels.cu.o.cubin.txt") # path
 
 set(CUDA_NVCC_EXECUTABLE "/usr/local/cuda-10.2/bin/nvcc") # path
 set(CUDA_NVCC_FLAGS -O3;-gencode;arch=compute_30,code=sm_30;-gencode;arch=compute_35,code=sm_35;-gencode;arch=compute_50,code=[sm_50,compute_50];-gencode;arch=compute_52,code=[sm_52,compute_52];-gencode;arch=compute_61,code=sm_61;-gencode;arch=compute_62,code=sm_62 ;; ) # list
@@ -79,8 +79,8 @@ set(CUDA_NVCC_FLAGS_MINSIZEREL  ; )
 set(CUDA_NVCC_FLAGS_RELEASE  ; )
 set(CUDA_NVCC_FLAGS_RELWITHDEBINFO  ; )
 set(nvcc_flags -m64;-Ddarknet_ros_lib_EXPORTS) # list
-set(CUDA_NVCC_INCLUDE_DIRS "/usr/local/cuda-10.2/include;/usr/include;/usr/include/opencv4;/home/idp-503/test_ros/sub_ws/src/darknet_ros/darknet/src;/home/idp-503/test_ros/sub_ws/src/darknet_ros/darknet/include;/home/idp-503/test_ros/sub_ws/src/darknet_ros/darknet_ros/include;/usr/include;/home/idp-503/test_ros/sub_ws/devel/include;/opt/ros/melodic/include;/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp;/usr/include;/usr/local/include/opencv4;/usr/local/cuda-10.2/include;/usr/include;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4") # list (needs to be in quotes to handle spaces properly).
-set(CUDA_NVCC_COMPILE_DEFINITIONS [==[ROS_BUILD_SHARED_LIBS=1;ROS_BUILD_SHARED_LIBS=1;DARKNET_FILE_PATH="/home/idp-503/test_ros/sub_ws/src/darknet_ros/darknet";GPU;ROS_PACKAGE_NAME="darknet_ros";ROSCONSOLE_BACKEND_LOG4CXX;OPENCV]==]) # list (needs to be in lua quotes see #16510 ).
+set(CUDA_NVCC_INCLUDE_DIRS "/usr/local/cuda-10.2/include;/usr/include;/usr/include/opencv4;/home/idp-503/dtm_final/sub_ws/src/darknet_ros/darknet/src;/home/idp-503/dtm_final/sub_ws/src/darknet_ros/darknet/include;/home/idp-503/dtm_final/sub_ws/src/darknet_ros/darknet_ros/include;/usr/include;/home/idp-503/dtm_final/sub_ws/devel/include;/opt/ros/melodic/include;/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp;/usr/include;/usr/local/include/opencv4;/usr/local/cuda-10.2/include;/usr/include;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4;/usr/include/opencv4") # list (needs to be in quotes to handle spaces properly).
+set(CUDA_NVCC_COMPILE_DEFINITIONS [==[ROS_BUILD_SHARED_LIBS=1;ROS_BUILD_SHARED_LIBS=1;DARKNET_FILE_PATH="/home/idp-503/dtm_final/sub_ws/src/darknet_ros/darknet";GPU;ROS_PACKAGE_NAME="darknet_ros";ROSCONSOLE_BACKEND_LOG4CXX;OPENCV]==]) # list (needs to be in lua quotes see #16510 ).
 set(format_flag "-c") # string
 set(cuda_language_flag ) # list
 
