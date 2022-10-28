@@ -19,6 +19,7 @@ nc.login('root','root')
 lat=0
 lng=0
 obj_name=""
+o_obj=""
 bridge=CvBridge()
 def callback(data):
     lat=data.latitude
@@ -27,43 +28,50 @@ def callback(data):
     
 
 def callback2(data):
-    print("receive image")
+#    print("receive image")
     try:
         cv2_img=bridge.imgmsg_to_cv2(data,"bgr8")
     except CvBridgeError,e:
         print(e)
     else:
-        time=data.header.stamp
-        t_s=datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        img_name="{}.png".format(time)
-        cv2.imwrite(img_name,cv2_img)
-#        nc.put_file('test/test{}.png'.format(time),img_name)
-#        os.remove(img_name)
-#        link_info=nc.share_file_with_link('3/test{}.png'.format(time)).get_link()+"preview"
-#        URL='http://103.218.163.29:3500/nodelinkapi/event?eventtype=etc&eventdetailtype='+obj_name+'&lat='+str(lat)+'&lng='+str(lng)+'&vehicle_id=31&image_path='+link_info+'&start_time='+str(t_s)
-#        response=requests.get(URL)
-#        print('send')
-    sleep(0.3)
+        print('re')
+        if(o_obj!=obj_name):
+            time=data.header.stamp
+            t_s=datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            img_name="{}.png".format(time)
+            cv2.imwrite(img_name,cv2_img)
+            nc.put_file('test/test{}.png'.format(time),img_name)
+            os.remove(img_name)
+            link_info=nc.share_file_with_link('test/test{}.png'.format(time)).get_link()+"preview"
+            URL='http://103.218.163.29:3500/nodelinkapi/event?eventtype=etc&eventdetailtype='+obj_name+'&lat='+str(lat)+'&lng='+str(lng)+'&vehicle_id=31&image_path='+link_info+'&start_time='+str(t_s)
+            response=requests.get(URL)
+            print('send')
+        else:
+            print('skip')
 
 
 def callback3(data):
     global obj_name
+    global o_obj
     for i in data.bounding_boxes:
         obj_name+=str(i.id)
 #    print("{}".format(obj_name))
+    o_obj=obj_name
     obj_name=''
 
 def callback4(data):
-    head=data/100000
+    head=data.heading/100000
     head_URL='http://103.218.163.29:3500/nodelinkapi/vehicle?vehicle_id=31&lat='+str(lat)+'&lng='+str(lng)+'&heading='+str(head)
     response=requests.get(head_URL)
+
 def listener():
     rospy.init_node('listener', anonymous=True)
     rospy.Subscriber('ublox_gps/fix', NavSatFix, callback)
-    rospy.Subscriber('darknet_ros/detection_image',Image,callback2)
     rospy.Subscriber('darknet_ros/bounding_boxes',BoundingBoxes,callback3)
-    rospy.Subscriber('ublox_gps/navstatus',NavPVT,callback4)
+    rospy.Subscriber('darknet_ros/detection_image',Image,callback2)
+    rospy.Subscriber('ublox_gps/navpvt',NavPVT,callback4)
     rospy.spin()
+
 
 if __name__ == '__main__':
     listener()
