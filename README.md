@@ -3,12 +3,11 @@
     roslaunch darknet_ros darknet_ros.launch
     
 * using different camera topic
-    *  in darknet_ros/darknet_ros/launch/darknet_ros.launch line6
+    *  in darknet_ros/darknet_ros/launch/darknet_ros.launch line 6
       
       <arg name="image" default=" [camera_topic_name] " />
 * using different cfg,weight file
-    *  in darknet_ros/darknet_ros/launch/darknet_ros.launch line14
-       
+    *  in darknet_ros/darknet_ros/launch/darknet_ros.launch line 14
        <arg name="network_param_fiel"   default="$(find darknet_ros)/config/ [yaml_file_name]" />
        
     *  in darknet_ros/darknet_ros/config/yaml_file_name.yaml
@@ -26,6 +25,8 @@
                     -1
                     -2
                     -3
-    *  Download weight file at darknet_ros/darknet_ros/yolo_network_config/weight & cfg file at darknet_ros/darknet_ros/yolo_network_config/cfg
+                    
+    *  Download weight file at darknet_ros/darknet_ros/yolo_network_config/weight 
+    *  Download cfg file at darknet_ros/darknet_ros/yolo_network_config/cfg
             
             
