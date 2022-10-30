@@ -29,5 +29,15 @@
                     
     *  Download weight file at darknet_ros/darknet_ros/yolo_network_config/weight 
     *  Download cfg file at darknet_ros/darknet_ros/yolo_network_config/cfg
-            
-            
+## ublox_f9p
+    sudo chmod 777 /dev/ttyACM0
+    roslaunch ublox_gps ublox_device.launch
+* change launch file
+    * in ublox_f9p/ublox_gps/launch/ublox_device.launch
+  
+      <arg_name="node_name" value="ublox_gps"/>
+      <arg_name="param_file_name" value="zed-f9p"/>
+* change device
+    * in ublox_f9p/ublox_gps/config/zed-f9p.yaml line 5
+      
+      device: /dev/port_name (default /dev/ttyACM0)
