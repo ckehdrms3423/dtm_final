@@ -36,8 +36,23 @@
     * in ublox_f9p/ublox_gps/launch/ublox_device.launch
   
       <arg_name="node_name" value="ublox_gps"/>
+      
       <arg_name="param_file_name" value="zed-f9p"/>
+      
 * change device
     * in ublox_f9p/ublox_gps/config/zed-f9p.yaml line 5
       
       device: /dev/port_name (default /dev/ttyACM0)
+      
+## usb_cam
+    roslaunch usb_cam usb_cam-test.launch
+    
+* change launch file
+    * in usb_cam/launch/usb_cam-test.launch line 3
+    
+      <param name="video_device" value="/dev/port_name (defaule /dev/video0) />
+    * in usb_cam/nodes/usb_cam_node.cpp line 92
+    
+      node_.param("video_device",video_device_name,std::string("/dev/port_name"));
+
+    
