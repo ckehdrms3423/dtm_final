@@ -8,7 +8,8 @@
       <arg name="image" default=" [camera_topic_name] " />
 * using different cfg,weight file
     *  in darknet_ros/darknet_ros/launch/darknet_ros.launch line 14
-       <arg name="network_param_fiel"   default="$(find darknet_ros)/config/ [yaml_file_name]" />
+
+        <arg name="network_param_fiel"   default="$(find darknet_ros)/config/ [yaml_file_name]" />
        
     *  in darknet_ros/darknet_ros/config/yaml_file_name.yaml
         
