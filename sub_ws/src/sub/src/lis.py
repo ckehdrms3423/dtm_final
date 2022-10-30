@@ -66,10 +66,10 @@ def callback4(data):
 
 def listener():
     rospy.init_node('listener', anonymous=True)
-    rospy.Subscriber('ublox_gps/fix', NavSatFix, callback)
-    rospy.Subscriber('darknet_ros/bounding_boxes',BoundingBoxes,callback3)
-    rospy.Subscriber('darknet_ros/detection_image',Image,callback2)
-    rospy.Subscriber('ublox_gps/navpvt',NavPVT,callback4)
+    rospy.Subscriber('/ublox_gps/fix', NavSatFix, callback)
+    rospy.Subscriber('/darknet_ros/bounding_boxes',BoundingBoxes,callback3)
+    rospy.Subscriber('/darknet_ros/detection_image',Image,callback2)
+    rospy.Subscriber('/ublox_gps/navpvt',NavPVT,callback4)
     rospy.spin()
 
 
