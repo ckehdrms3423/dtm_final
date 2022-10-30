@@ -54,5 +54,6 @@
     * in usb_cam/nodes/usb_cam_node.cpp line 92
     
       node_.param("video_device",video_device_name,std::string("/dev/port_name"));
-
+## sub
+    rosrun sub lis.py
     
