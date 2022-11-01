@@ -153,6 +153,13 @@
 /home/idp-503/dtm_final/sub_ws/build/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_nodelet.dir
 /home/idp-503/dtm_final/sub_ws/build/darknet_ros/darknet_ros/CMakeFiles/_run_tests_darknet_ros.dir
 /home/idp-503/dtm_final/sub_ws/build/darknet_ros/darknet_ros/CMakeFiles/clean_test_results_darknet_ros.dir
+/home/idp-503/dtm_final/sub_ws/build/img_publisher/CMakeFiles/install/strip.dir
+/home/idp-503/dtm_final/sub_ws/build/img_publisher/CMakeFiles/edit_cache.dir
+/home/idp-503/dtm_final/sub_ws/build/img_publisher/CMakeFiles/list_install_components.dir
+/home/idp-503/dtm_final/sub_ws/build/img_publisher/CMakeFiles/test.dir
+/home/idp-503/dtm_final/sub_ws/build/img_publisher/CMakeFiles/install/local.dir
+/home/idp-503/dtm_final/sub_ws/build/img_publisher/CMakeFiles/rebuild_cache.dir
+/home/idp-503/dtm_final/sub_ws/build/img_publisher/CMakeFiles/install.dir
 /home/idp-503/dtm_final/sub_ws/build/sub/CMakeFiles/install/strip.dir
 /home/idp-503/dtm_final/sub_ws/build/sub/CMakeFiles/edit_cache.dir
 /home/idp-503/dtm_final/sub_ws/build/sub/CMakeFiles/list_install_components.dir

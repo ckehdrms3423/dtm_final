@@ -1,0 +1,32 @@
+yolo_model:
+
+  config_file:
+    name: yolov3-tiny3.cfg
+  weight_file:
+    name: yolov3-tiny3.weights
+  threshold:
+    value: 0.3
+  detection_classes:
+    names:
+      - Construction_ahead
+      - Left_curve
+      - Maximum_30_ahead
+      - Maximum_30
+      - Maximum_40
+      - Maximum_50
+      - Maximum_50_ahead
+      - Maximum_60_ahead
+      - Maximum_60
+      - Maximum_70
+      - Maximum_80
+      - Right_curve
+      - Signal_ahead
+      - Stop_ahead
+      - Stop
+      - Yield_ahead
+      - Yield
+      - Pedestrian_walk
+      - Pedestrian_no_walk
+      - Pedestrian_school_walk
+      - Left_turn
+      - Right_turn

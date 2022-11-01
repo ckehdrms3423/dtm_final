@@ -3551,6 +3551,24 @@ clean: darknet_ros/darknet_ros/CMakeFiles/clean_test_results_darknet_ros.dir/cle
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory img_publisher
+
+# Convenience name for "all" pass in the directory.
+img_publisher/all:
+
+.PHONY : img_publisher/all
+
+# Convenience name for "clean" pass in the directory.
+img_publisher/clean:
+
+.PHONY : img_publisher/clean
+
+# Convenience name for "preinstall" pass in the directory.
+img_publisher/preinstall:
+
+.PHONY : img_publisher/preinstall
+
+#=============================================================================
 # Directory level rules for directory sub
 
 # Convenience name for "all" pass in the directory.
