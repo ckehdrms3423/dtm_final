@@ -22,9 +22,11 @@ obj_name=""
 o_obj=""
 bridge=CvBridge()
 def callback(data):
+    global lat
+    global lng
     lat=data.latitude
     lng=data.longitude
-#    print("lat:{}, lon:{}".format(lat,lon))
+#    print("lat:{}, lon:{}".format(lat,lng))
     
 
 def callback2(data):
@@ -34,7 +36,6 @@ def callback2(data):
     except CvBridgeError,e:
         print(e)
     else:
-        print('re')
         if(o_obj!=obj_name):
             time=data.header.stamp
             t_s=datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -61,15 +62,16 @@ def callback3(data):
 
 def callback4(data):
     head=data.heading/100000
+    print("lat:{}, lon:{}".format(lat,lng))
     head_URL='http://103.218.163.29:3500/nodelinkapi/vehicle?vehicle_id=31&lat='+str(lat)+'&lng='+str(lng)+'&heading='+str(head)
     response=requests.get(head_URL)
 
 def listener():
     rospy.init_node('listener', anonymous=True)
-    rospy.Subscriber('/ublox_gps/fix', NavSatFix, callback)
-    rospy.Subscriber('/darknet_ros/bounding_boxes',BoundingBoxes,callback3)
-    rospy.Subscriber('/darknet_ros/detection_image',Image,callback2)
-    rospy.Subscriber('/ublox_gps/navpvt',NavPVT,callback4)
+    rospy.Subscriber('ublox_gps/fix', NavSatFix, callback)
+    rospy.Subscriber('darknet_ros/bounding_boxes',BoundingBoxes,callback3)
+    rospy.Subscriber('darknet_ros/detection_image',Image,callback2)
+    rospy.Subscriber('ublox_gps/navpvt',NavPVT,callback4)
     rospy.spin()
 
 
