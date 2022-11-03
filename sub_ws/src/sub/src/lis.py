@@ -24,6 +24,7 @@ o_lng=0
 obj_name=""
 o_obj=""
 bridge=CvBridge()
+count=0
 def callback(data):
     global lat
     global lng
@@ -35,6 +36,8 @@ def callback(data):
 def callback2(data):
     global o_lat
     global o_lng
+    global o_obj
+    new_obj=obj_name
 #    print("receive image")
     try:
         cv2_img=bridge.imgmsg_to_cv2(data,"bgr8")
@@ -43,42 +46,49 @@ def callback2(data):
     else:
         old=(float(o_lat),float(o_lng))
         new=(float(lat),float(lng))
-        if(o_obj!=obj_name and haversine(old,new,unit='m')<20):
+        if(o_obj!=obj_name):
             time=data.header.stamp
             t_s=datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             img_name="{}.png".format(time)
-#            cv2.imwrite(img_name,cv2_img)
-#            nc.put_file('test/test{}.png'.format(time),img_name)
-#            os.remove(img_name)
-#            print("{}".format(o_obj))
-#            link_info=nc.share_file_with_link('test/test{}.png'.format(time)).get_link()+"/preview"
-#            URL='http://103.218.163.29:3500/nodelinkapi/event?eventtype=etc&eventdetailtype='+o_obj+'&lat='+str(lat)+'&lng='+str(lng)+'&vehicle_id=31&image_path='+link_info+'&start_time='+str(t_s)
+            cv2.imwrite(img_name,cv2_img)
+            nc.put_file('test/test{}.png'.format(time),img_name)
+            os.remove(img_name)
+            print("{}".format(o_obj))
+            link_info=nc.share_file_with_link('test/test{}.png'.format(time)).get_link()+"/preview"
+            URL='http://103.218.163.29:3500/nodelinkapi/event?eventtype=etc&eventdetailtype='+obj_name+'&lat='+str(lat)+'&lng='+str(lng)+'&vehicle_id=31&image_path='+link_info+'&start_time='+str(t_s)
             response=requests.get(URL)
             print('send')
-        else:
-            print('skip')
+#        else:
+#            print('skip')
+        o_obj=obj_name
         o_lat=lat
         o_lng=lng
-        print("{},{},{}.{}".format(lat,lng,o_lat,o_lng))
+#        print("{},{},{}.{}".format(lat,lng,o_lat,o_lng))
 
 
 
 def callback3(data):
     global obj_name
-    global o_obj
     obj_name=''
     for i in data.bounding_boxes:
 #        obj_name+=str(i.id)
-        obj_name=str(i.id)
+        if(i.id==0 or i.id==1):
+            obj_name=str('pothole')
+        if(i.id==2 or i.id==3):
+            obj_name=str('roadtirpod')
 #    print("{}".format(obj_name))
-    o_obj=obj_name
+
 
 
 def callback4(data):
-    head=math.radians(data.heading/100000)
-    print("lat:{}, lon:{}".format(lat,lng))
-    head_URL='http://103.218.163.29:3500/nodelinkapi/vehicle?vehicle_id=31&lat='+str(lat)+'&lng='+str(lng)+'&heading='+str(head)
-    response=requests.get(head_URL)
+    global count
+    count+=1
+    if count==5:
+        count=0
+        head=math.radians(data.heading/100000)
+        print("lat:{}, lon:{}".format(lat,lng))
+        head_URL='http://103.218.163.29:3500/nodelinkapi/vehicle?vehicle_id=31&lat='+str(lat)+'&lng='+str(lng)+'&heading='+str(head)
+        response=requests.get(head_URL)
 
 def listener():
     rospy.init_node('listener', anonymous=True)
